@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AwesomeCo Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --clr-primary: #0077ff;
+      --clr-primary-light: #6bb6ff;
+      --clr-dark: #222;
+      --clr-light: #f8f9fa;
+      --clr-accent: #ffc107;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: var(--clr-dark); }
+    img { width: 100%; display: block; }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-light));
+      color: #fff;
+      padding: 6rem 1.5rem 4rem;
+      text-align: center;
+    }
+    .hero h1 { font-size: 2.75rem; margin-bottom: 0.5rem; }
+    .hero p { margin-bottom: 1.5rem; font-size: 1.125rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background: var(--clr-accent);
+      color: var(--clr-dark);
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+    .btn:hover { transform: translateY(-3px); }
+
+    /* Container & Grid helpers */
+    .container { max-width: 1000px; margin: auto; padding: 0 1rem; }
+    .section { padding: 4rem 0; }
+    .section h2 { text-align: center; margin-bottom: 2.5rem; font-size: 2rem; }
+
+    /* Features 3-column layout */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .feature {
+      background: var(--clr-light);
+      border-radius: 8px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .feature img {
+      width: 64px;
+      margin: 0 auto 1rem;
+    }
+
+    /* About 2-column */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .about-grid div { padding: 0 0.5rem; }
+
+    /* Gallery 4-column */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img { border-radius: 4px; }
+
+    /* Footer */
+    footer {
+      background: var(--clr-dark);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    footer a { color: var(--clr-accent); text-decoration: none; }
+
+    /* Responsive tweaks */
+    @media (max-width: 700px) {
+      .about-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Welcome to AwesomeCo</h1>
+    <p>We build amazing digital experiences that delight users and grow businesses.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </header>
+
+  <!-- FEATURES -->
+  <section class="section">
+    <div class="container">
+      <h2>Our Features</h2>
+      <div class="features">
+        <div class="feature">
+          <img src="https://img.icons8.com/fluency/96/rocket.png" alt="Fast">
+          <h3>Lightning Fast</h3>
+          <p>Optimized performance to keep your users engaged.</p>
+        </div>
+        <div class="feature">
+          <img src="https://img.icons8.com/fluency/96/paint-palette.png" alt="Design">
+          <h3>Pixel-Perfect Design</h3>
+          <p>Stunning visuals crafted with care and creativity.</p>
+        </div>
+        <div class="feature">
+          <img src="https://img.icons8.com/fluency/96/phone.png" alt="Responsive">
+          <h3>Mobile Friendly</h3>
+          <p>Looks great on every screen size, guaranteed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" style="background: var(--clr-light);">
+    <div class="container">
+      <h2>About Us</h2>
+      <div class="about-grid">
+        <div>
+          <img src="https://picsum.photos/600/400?random=1" alt="Team">
+        </div>
+        <div>
+          <p>
+            Founded in 2023, AwesomeCo is a small but passionate team of designers
+            and developers who believe great software should feel effortless.
+            We specialize in modern web apps, branding, and user-experience design.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="https://picsum.photos/seed/g1/400" alt="Work 1">
+        <img src="https://picsum.photos/seed/g2/400" alt="Work 2">
+        <img src="https://picsum.photos/seed/g3/400" alt="Work 3">
+        <img src="https://picsum.photos/seed/g4/400" alt="Work 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section" style="background: var(--clr-light); text-align: center;">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <p>Email us at <a href="mailto:hello@awesomeco.dev">hello@awesomeco.dev</a></p>
+      <p>Or call <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; <span id="year"></span> AwesomeCo. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
